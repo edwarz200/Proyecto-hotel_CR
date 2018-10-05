@@ -1,0 +1,157 @@
+body {
+  background: #fff;
+  /* background:#181907; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin: 0;
+}
+
+.inputcolortext{
+  color: #fff;
+}
+
+.regresar {
+  position: relative;
+  top: 0;
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  display: table;
+}
+
+.envoltura {
+  position: absolute;
+  /* top: 40px; */
+  left: 0 !important;
+  right: 0 !important;
+  margin: auto;
+  padding-top: 30px;
+  z-index: 12;
+}
+
+.contenedor {
+  position: relative;
+  margin-bottom: 0 !important;
+  top: 0;
+  height: 623px;
+  min-block-size: 750px;
+  background-color: #A6ACAF;
+  box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, .8);
+  z-index: 1;
+}
+
+.imgfondo {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  min-block-size: 750px;
+  background: url(../assets/Hotel/598d081186270.jpeg) no-repeat;
+  /* image-rendering: pixelated; */
+  background-size: cover;
+  filter: blur(5px) grayscale(12);
+  z-index: -99999;
+}
+
+.gray {
+  background: #032735 !important;
+}
+
+.gray2 {
+  background: #04374b !important;
+}
+
+.cabecera {
+  border-bottom: 5px solid #333;
+  padding-top: 5px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.cuerpo {
+  background: #E5E7E9;
+  border: solid #ccc;
+  border-width: 2px 0;
+  padding: 15px 35px;
+}
+
+label {
+  color: #666;
+  font-weight: bold
+}
+
+input {
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, .8);
+  font: bold 12px Arial, Helvetica, sans-serif;
+  height: 24px;
+  line-height: 20px;
+  padding: 0 2px;
+  width: 230px;
+}
+
+.boton {
+  background: #ccc;
+  background: -webkit-linear-gradient(top, #fc6, #f63);
+  background: linear-gradient(top, #fc6, #f63);
+  color: #666;
+  width: 120px;
+}
+
+/*Tip estas instrucciones animan al boton enviar
+* para que se vea como si se pulsara*/
+
+.pie {
+  border-top: 5px solid #333;
+  color: #fff;
+  font-size: 11px;
+  line-height: 30px;
+  text-align: center;
+}
+
+form, p {
+  margin: 0;
+}
+
+p {
+  padding-bottom: 5px;
+}
+
+/*Para separar el botón de ingresar*/
+
+p#bot {
+  padding-top: 10px;
+}
+
+.divp{
+  height: 559px;
+}
+
+@media only screen and (max-width: 960px){
+  p{
+    font-size: 10px;
+  }
+
+}
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}

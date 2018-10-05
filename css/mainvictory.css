@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Playball');
+*{
+    padding:0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.navb div:nth-child(1){
+    overflow: hidden;
+    width: 100%;
+    height:200px;
+}
+.navb div img{
+    width: 100%;
+    height: 300px;
+    filter: blur(3px);
+
+}
+.navb div:nth-child(2) {
+    text-decoration: none;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(24, 19, 37);
+    color: white;
+    margin: auto;
+
+}
+.navb div ul{
+    width: 50%;
+    height: 100%;
+    margin: auto;
+}
+.navb div ul li{
+    height: 100%;
+    width: 150px;
+    padding: 0 20px;
+    transform: 0s line;
+}
+.navb div ul li a{
+    height: 100%;
+    padding: 0 0 10px 0;
+    transform: 0s line;
+}
+.navb div ul li:hover a{
+    background-color: rgb(73, 71, 82);
+    color: rgb(255, 255, 255);
+}
+.navb div ul li:hover{
+    background-color: rgb(73, 71, 82);
+}
+.rese{
+    font-family: 'Playball', cursive;
+    font-size: 50px;
+}
+.res{
+    font-size: 25px;
+    color: rgb(113, 121, 129);
+    font-weight: none;
+}
+.navb{
+    height: 250px;
+}
+.input-field {
+    overflow: hidden !important;
+}
+.segun{
+    width: 100%;
+    height: 100px;
+}

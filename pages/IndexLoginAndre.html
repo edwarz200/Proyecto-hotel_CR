@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Visual feedback for password strength on an image that gets pixelated or blurred." />
+    <meta name="keywords" content="password strength, visual feedback, image, canvas, javascript, css, blur, pixelated" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <!-- <link rel="stylesheet" href="../Styles/mainandrea.css"> -->
+    <!-- <link rel="stylesheet" href="../materialize/css/materialize.min.css"> -->
+    <title>Document</title>
+    <script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+</head>
+
+<body class="demo-1 loading">
+    <svg class="hidden">
+        <symbol id="icon-arrow" viewBox="0 0 24 24">
+            <title>arrow</title>
+            <polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 " />
+        </symbol>
+        <symbol id="icon-drop" viewBox="0 0 24 24">
+            <title>drop</title>
+            <path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z" />
+            <path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z" />
+        </symbol>
+    </svg>
+    <main>
+        <div class="content content--side">
+            <header class="codrops-header">
+                <div class="codrops-header__title centrar">
+                    <div class="favicon"></div>
+                    <h1>Hotel Castillo Resort</h1>
+                </div>
+                <h3 class="info">Iniciar Sesión</h3>
+            </header>
+
+            <form id="form_autenticacion" action="#" class="form">
+                <div class="form__item">
+                    <label class="form__label" for="correo">Correo</label>
+                    <input class="form__input" type="text" name="correo" id="correo" placeholder="Correo">
+                </div>
+                <div class="form__item">
+                    <label class="form__label" for="password">Password</label>
+                    <div class="form__input-wrap">
+                        <input class="form__input" type="password" name="password" id="password" class="contr"
+                            placeholder="Contraseña">
+                        <p class="form__password-strength" id="strength-output"></p>
+                    </div>
+                </div>
+                <div class="form__item form__item--actions">
+                    <span>Olvidaste Tu contraseña? <a class="form__link" href="#">click aquí</a></span>
+                    <input class="form__button" type="button" name="signup" id="login-button" value="Iniciar sesión">
+                    <span>Necesitas una cuenta?<a class="form__link" href="registro.html" class="reg">
+                            ¡Regístrate ahora!</a></span>
+                </div>
+                <div class="form__item form__item--actions">
+                </div>
+            </form>
+        </div>
+        <div class="content content--side">
+            <div class="poster" style="filter: grayscale(1); background-image:url(../assets/Hotel/Pajaros_mirandote_para_matarte.jpg);"></div>
+            <div class="canvas-wrap">
+                <canvas></canvas>
+            </div>
+            <!-- <nav class="demos">
+                <a class="demo demo--current" href="index.html"><span>Demo 1</span></a>
+                <a class="demo" href="index2.html"><span>Demo 2 (reverse)</span></a>
+            </nav> -->
+            <!-- <a class="github" href="https://github.com/codrops/PasswordStrengthVisualization/" title="Find this project on GitHub"><svg
+                    class="icon icon--github">
+                    <use xlink:href="#icon-github"></use>
+                </svg></a> -->
+        </div>
+        </div>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="../Js/imagesloaded.pkgd.min.js"></script>
+    <script src="../Js/BDmain.js"></script>
+    <script src="../Js/logincarga.js"></script>
+    <script src="../Js/Login1.js"></script>
+</body>
+
+</html>
