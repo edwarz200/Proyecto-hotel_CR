@@ -1,0 +1,238 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(12, 11, 11);
+}
+
+section {
+    position: absolute;
+    width: 600px;
+    height: 390px;
+    background-color: rgb(138, 130, 131);
+    margin-top: 200px;
+    margin-left: 380px;
+    border-radius: 50px;
+}
+
+#cabecera {
+    /*linea azul que separa logo*/
+    border-bottom: 5px solid #333;
+    padding-top: 5px;
+    /*color:#FFF;*/
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+label {
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    top: 130px;
+    margin-left: 45px;
+}
+
+.label1 {
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    top: 240px;
+    margin-left: 45px;
+}
+
+input {
+    /*border: 1px solid #999; No usar esta línea y dejar box-shadow hace efecto de profundidad*/
+    border-radius: 5px;
+    /*probar con 10px se hacen ovalados los inputs*/
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, .8);
+    font: bold 12px Arial, Helvetica, sans-serif;
+    height: 50px;
+    line-height: 20px;
+    padding: 0 2px;
+    width: 500px;
+    margin-top: 100px;
+    margin-left: 45px;
+}
+
+.input1 {
+    /*border: 1px solid #999; No usar esta línea y dejar box-shadow hace efecto de profundidad*/
+    border-radius: 5px;
+    /*probar con 10px se hacen ovalados los inputs*/
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, .8);
+    font: bold 12px Arial, Helvetica, sans-serif;
+    height: 50px;
+    line-height: 20px;
+    padding: 0 2px;
+    width: 500px;
+    margin-top: 50px;
+    margin-left: 45px;
+}
+
+a:-webkit-any-link {
+    position: absolute;
+    color: rgb(9, 9, 10);
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-inline-start: 250px;
+    margin-top: 30px;
+    margin-left: 250px;
+}
+
+/*pagina de revision**/
+.titu1 {
+    position: absolute;
+    color: black;
+    top: 70px;
+    margin-left: 45px;
+    width: 500px;
+    height: 200px;
+    font-size: 22px;
+}
+
+.titu2 {
+    position: absolute;
+    color: rgb(9, 9, 10);
+    top: 240px;
+    margin-left: 310px;
+    width: 500px;
+    height: 200px;
+    font-size: 22px;
+}
+
+.dos {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    background-color: rgb(138, 130, 131);
+    margin-top: 200px;
+    margin-left: 380px;
+    border-radius: 50px;
+}
+
+.codi {
+    /*border: 1px solid #999; No usar esta línea y dejar box-shadow hace efecto de profundidad*/
+    border-radius: 5px;
+    /*probar con 10px se hacen ovalados los inputs*/
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, .8);
+    font: bold 12px Arial, Helvetica, sans-serif;
+    height: 60px;
+    line-height: 20px;
+    padding: 0 2px;
+    width: 200px;
+    margin-top: 180px;
+    margin-left: 45px;
+}
+
+input#repass {
+    background: #ffc url(./images/infinio.jpg) no-repeat 0 5px;
+    padding-left: 25px;
+}
+
+.bot1 a:-webkit-any-link {
+    position: absolute;
+    color: rgb(9, 9, 10);
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-inline-start: 250px;
+    margin-top: 40px;
+    margin-left: 350px;
+}
+
+.bot2 a:-webkit-any-link {
+    position: absolute;
+    color: rgb(9, 9, 10);
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-inline-start: 250px;
+    margin-top: 40px;
+    margin-left: 460px;
+}
+
+.bot3 a:-webkit-any-link {
+    color:rgb(9, 9, 10);
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 40px;
+    margin-left: 50px;
+    
+}
+
+/*pagina de cambio**/
+
+
+
+
+.dos1 {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    background-color: rgb(138, 130, 131);
+    margin-top: 200px;
+    margin-left: 380px;
+    border-radius: 50px;
+}
+.con1 {
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    top: 120px;
+    margin-left: 45px;
+}
+.con2 {
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    top: 240px;
+    margin-left: 45px;
+}
+.cua1 {
+    /*border: 1px solid #999; No usar esta línea y dejar box-shadow hace efecto de profundidad*/
+    border-radius: 5px;
+    /*probar con 10px se hacen ovalados los inputs*/
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, .8);
+    font: bold 12px Arial, Helvetica, sans-serif;
+    height: 50px;
+    line-height: 20px;
+    padding: 0 2px;
+    width: 500px;
+    margin-top: 80px;
+    margin-left: 45px;
+}
+.cua2 {
+    /*border: 1px solid #999; No usar esta línea y dejar box-shadow hace efecto de profundidad*/
+    border-radius: 5px;
+    /*probar con 10px se hacen ovalados los inputs*/
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, .8);
+    font: bold 12px Arial, Helvetica, sans-serif;
+    height: 50px;
+    line-height: 20px;
+    padding: 0 2px;
+    width: 480px;
+    margin-top: 70px;
+    margin-left: 45px;
+}
+.bot4 a:-webkit-any-link {
+    color:rgb(9, 9, 10);
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 40px;
+    margin-left: 50px;
+    
+}
+.bot5 a:-webkit-any-link {
+    color:rgb(9, 9, 10);
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 40px;
+    margin-left: 130px;
+    
+}
