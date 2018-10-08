@@ -9,35 +9,47 @@
  * http://www.codrops.com
  */
 
+function enviarnombre(nombre,apellido){
+    alertify.set('notifier', 'delay', 2)
+    alertify.set('notifier', 'position', 'bottom-right')
+    alertify.success('Bienvenido' + nombre)
+    console.log(nombre+' '+apellido)
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const $formautenticacion = document.querySelector('#form_autenticacion')
     var loginbutton = document.querySelector('#login-button')
     var lopas = document.querySelector('#password')
-    
+
     lopas.addEventListener('keypress', (e) => {
         tecla = (document.all) ? e.keyCode : e.which;
         if (tecla == 13) {
             enviarlogin();
         }
     })
-    
-    loginbutton.addEventListener('click',  enviarlogin = async (event) =>{
+
+    loginbutton.addEventListener('click', enviarlogin = async (event) => {
         const formData = new FormData($formautenticacion)
         var emallogin = formData.get('correo')
         var passwordlogin = formData.get('password')
-            if (emallogin !== "") {
-                if (passwordlogin !== "") {
-                    validarlogin(emallogin,passwordlogin);
-                }else{
-                    alert('Falta la contraseña')
-                }
-            }else{
-                alert('falta el correo')
+        if (emallogin !== "") {
+            if (passwordlogin !== "") {
+                validarlogin(emallogin, passwordlogin);
+                enviarnombre(nombre,apellido);
+            } else {
+                alertify.set('notifier', 'delay', 4)
+                alertify.set('notifier', 'position', 'bottom-center')
+                alertify.message('falta la contraseña')
             }
+        } else {
+            alertify.set('notifier', 'delay', 4)
+            alertify.set('notifier', 'position', 'bottom-center')
+            alertify.message('falta el correo')
+        }
     })
-    })
-    
+})
+
 
 {
     const passwordInput = document.querySelector('#password');
@@ -52,17 +64,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvasWrapper = document.querySelector('.canvas-wrap');
     const canvas = canvasWrapper.querySelector('canvas');
     const poster = document.querySelector('.poster');
-    const posterImg = poster.style.backgroundImage.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
+    const posterImg = poster.style.backgroundImage.match(/\((.*?)\)/)[1].replace(/('|")/g, '');
     imagesLoaded(poster, { background: true }, () => {
         document.body.classList.remove('loading');
     });
 
     // The following code was taken and modified from http://jsfiddle.net/u6apxgfk/390/
     // (C) Ken Fyrstenberg, Epistemex, License: CC3.0-attr
-    
+
     // and merged with https://codepen.io/bassta/pen/OPVzyB?editors=1010
 
-	const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d');
     const img = new Image();
     let imgRatio;
     let wrapperRatio;
@@ -97,10 +109,10 @@ document.addEventListener('DOMContentLoaded', () => {
         newY = 0;
         wrapperRatio = newWidth / newHeight;
 
-        if ( wrapperRatio > imgRatio ) {
+        if (wrapperRatio > imgRatio) {
             newHeight = Math.round(w / imgRatio);
             newY = (h - newHeight) / 16;
-        } 
+        }
         else {
             newWidth = Math.round(h * imgRatio);
             newX = (w - newWidth) / 15;
@@ -117,10 +129,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         // draw original image to the scaled size
-        ctx.drawImage(img, 0, 0, w*size, h*size);
+        ctx.drawImage(img, 0, 0, w * size, h * size);
         // then draw that scaled image thumb back to fill canvas
         // As smoothing is off the result will be pixelated
-        ctx.drawImage(canvas, 0, 0, w*size, h*size, newX, newY, newWidth+.05*w, newHeight+.05*h);
+        ctx.drawImage(canvas, 0, 0, w * size, h * size, newX, newY, newWidth + .05 * w, newHeight + .05 * h);
     };
 
     window.addEventListener('resize', () => {
@@ -137,13 +149,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // so we want to map a factor of 1 (all pixelated) to 100 (clear image) to 
         // a value of 0 to 11 of guesses_log10.
         // This result will be used in the render function.
-        pxFactor = 99/11*Math.min(11,Math.round(result.guesses_log10)) + 1;
-        
+        pxFactor = 99 / 11 * Math.min(11, Math.round(result.guesses_log10)) + 1;
+
         // so we see most of the time pixels rather than approaching a clear image sooner..
-        if ( pxFactor != 1 && pxFactor != 100 ) {
-            pxFactor -= pxFactor/100*10;
+        if (pxFactor != 1 && pxFactor != 100) {
+            pxFactor -= pxFactor / 100 * 10;
         }
-        
+
         passwordFeedback.innerHTML = val !== '' ? `Calidad de la contraseña: ${strengthStr[result.score]}` : '';
         render();
     });

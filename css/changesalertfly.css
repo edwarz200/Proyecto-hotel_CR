@@ -1,0 +1,32 @@
+.alertify-notifier.ajs-center .ajs-message {
+    transform: translateX(-50%) !important;
+}
+
+.alertify-notifier .ajs-message {
+    background: rgba(0, 0, 0, 0.931) !important;
+    color: rgb(255, 255, 255) !important;
+    text-align: center !important;
+    border: none !important;
+    border-radius: 2px !important;
+}
+
+/* algo general */
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+.nombrecliente{
+    position: relative;
+    /* font-size: 16px; */
+    color: aliceblue;
+}
+.nombrecliente:hover{
+    color: #00ccff !important;
+}
+.nombrecliente a{
+    position: absolute;
+    width: 0 !important;
+    border-bottom: solid 1px #ffff !important;
+    transition: all .25s linear !important;
+    font-weight: 500;
+}
+.nombrecliente:hover a{
+    width: 100% !important;
+}

@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head class="head2">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Visual feedback for password strength on an image that gets pixelated or blurred." />
     <meta name="keywords" content="password strength, visual feedback, image, canvas, javascript, css, blur, pixelated" />
+	<link rel="shortcut icon" href="assets/fav.png">
     <meta name="author" content="Codrops" />
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="../css/base.css" />
-    <!-- <link rel="stylesheet" href="../Styles/mainandrea.css"> -->
-    <!-- <link rel="stylesheet" href="../materialize/css/materialize.min.css"> -->
-    <title>Document</title>
+    <!-- JavaScript -->
+    <script src="../alertifyjs/alertify.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../alertifyjs/css/alertify.css" />
+	<link rel="stylesheet" href="../css/changesalertfly.css">
+    <!-- Default theme -->
+    <link rel="stylesheet" href="../alertifyjs/css/themes/default.min.css" />
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="../alertifyjs/css/themes/semantic.min.css" />
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="../alertifyjs/css/themes/bootstrap.min.css" />
+    <!-- RTL version-->
+    <link rel="stylesheet" href="../alertifyjs/css/alertify.rtl.min.css" />
+    <!-- Default theme -->
+    <link rel="stylesheet" href="../alertifyjs/css/themes/default.rtl.min.css" />
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="../alertifyjs/css/themes/semantic.rtl.min.css" />
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="../alertifyjs/css/themes/bootstrap.rtl.min.css" />
+    <title>Iniciar Sesión</title>
     <script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 </head>
 
@@ -32,7 +50,7 @@
             <header class="codrops-header">
                 <div class="codrops-header__title centrar">
                     <div class="favicon"></div>
-                    <h1>Hotel Castillo Resort</h1>
+                    <h1>Hotel Castillo Resort <a></a></h1>
                 </div>
                 <h3 class="info">Iniciar Sesión</h3>
             </header>
@@ -81,6 +99,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="../Js/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
     <script src="../Js/BDmain.js"></script>
     <script src="../Js/logincarga.js"></script>
     <script src="../Js/Login1.js"></script>

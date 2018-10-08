@@ -2450,6 +2450,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
+.banner-left{
+  bottom: 12px;
+}
+
 .banner-left h6 {
   text-transform: uppercase;
   font-weight: 400;
@@ -2503,7 +2507,9 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-bottom: 60px;
   }
 }
-
+.banner-right{
+  top: 50px;
+}
 .banner-right .nav-tabs {
   border-bottom: none;
 }

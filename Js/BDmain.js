@@ -6,19 +6,16 @@ var config = {
   projectId: "sena-hotel-bd-5b493",
   storageBucket: "sena-hotel-bd-5b493.appspot.com",
   messagingSenderId: "543015928238"
-};
-firebase.initializeApp(config);
+}
+firebase.initializeApp(config)
 let refUsers = firebase.database().ref('users')
-let dataUser 
+let dataUser
 
-  refUsers.once('child_added', (data) => {
-      // console.log(data.val().nombre_perf)
-    })
 
 // Crear perfil
 
 function writePerfilData(data, uid) {
-  // const userid = firebase.auth().currentUser.uid;
+  // const userid = firebase.auth().currentUser.uid
   // const dni = data.dni
   firebase.database().ref('users/' + uid).set({
     dni: data.dni,
@@ -27,163 +24,229 @@ function writePerfilData(data, uid) {
     telefono_perf: data.telefono,
     correo_perf: data.correo,
   }).then(function () {
-    // validarlogin(data.correo, data.contrasena);
+    // validarlogin(data.correo, data.contrasena)
   }).catch(function (error) {
-    var errorCode = error.code;
-    var errorMessage = error.message;
+    var errorCode = error.code
+    var errorMessage = error.message
     if (errorCode === 'auth/invalid-email') {
-      alert('Correo mal digitado')
+      alertify.set('notifier', 'delay', 2)
+      alertify.set('notifier', 'position', 'bottom-right')
+      alertify.success('Correo mal digitado')
     } else if (errorCode === 'auth/network-request-failed') {
-      alert('Vulvete a conectar a la red del vecino')
+      alertify.set('notifier', 'delay', 2)
+      alertify.set('notifier', 'position', 'bottom-right')
+      alertify.success('Vuelvete a conectar a la red del vecino')
     } else {
-      alert(errorMessage);
+      alert(errorMessage)
     }
 
-    var user = firebase.auth().currentUser;
+    var user = firebase.auth().currentUser
 
     user.delete().then(function () {
       alert('Usuario borrado')
     }).catch(function (error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
+      var errorCode = error.code
+      var errorMessage = error.message
       if (errorCode === 'auth/invalid-email') {
-        alert('Correo mal digitado')
+        alertify.set('notifier', 'delay', 2)
+        alertify.set('notifier', 'position', 'bottom-right')
+        alertify.success('Correo mal digitado')
       } else if (errorCode === 'auth/network-request-failed') {
-        alert('Vulvete a conectar a la red del vecino')
+        alertify.set('notifier', 'delay', 2)
+        alertify.set('notifier', 'position', 'bottom-right')
+        alertify.success('Vulvete a conectar a la red del vecino')
       } else {
-        alert(errorMessage);
+        alertify.set('notifier', 'delay', 2)
+        alertify.set('notifier', 'position', 'bottom-right')
+        alertify.success(errorMessage)
       }
-      alert('Error en borrado de datos en el guardado de datos ' + errorMessage);
-    });
+      alert('Error en borrado de datos en el guardado de datos ' + errorMessage)
+    })
   })
 }
 
 function validaciondecorreo() {
-  var user = firebase.auth().currentUser;
+  var user = firebase.auth().currentUser
   user.sendEmailVerification().then(function () {
-    alert('Email Enviado');
+    alert('Email Enviado')
     // location.href = "../pages/IndexLoginAndre.html"
   }).catch(function (error) {
-    var errorCode = error.code;
-    var errorMessage = error.message;
+    var errorCode = error.code
+    var errorMessage = error.message
     if (errorCode === 'auth/invalid-email') {
-      alert('Correo mal digitado')
+      alertify.set('notifier', 'delay', 2)
+      alertify.set('notifier', 'position', 'bottom-right')
+      alertify.success('Correo mal digitado')
     } else if (errorCode === 'auth/network-request-failed') {
-      alert('Vulvete a conectar a la red del vecino')
+      alertify.set('notifier', 'delay', 2)
+      alertify.set('notifier', 'position', 'bottom-right')
+      alertify.success('Vulvete a conectar a la red del vecino')
     } else {
-      alert(errorMessage);
+      alertify.set('notifier', 'delay', 2)
+      alertify.set('notifier', 'position', 'bottom-right')
+      alertify.success(errorMessage)
     }
   })
-  }
+}
 
 
 function createperfil(data) {
-  firebase.auth().createUserWithEmailAndPassword(data.correo, data.contrasena).then(function ( res) {
-    writePerfilData(data, res.user.uid);
-    singin();
-    // location.href = "../index.html";
-    // validaciondecorreo();
+  firebase.auth().createUserWithEmailAndPassword(data.correo, data.contrasena).then(function (res) {
+    writePerfilData(data, res.user.uid)
+    singin()
+    // location.href = "../index.html"
+    // validaciondecorreo()
   })
     .catch(function (error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
+      var errorCode = error.code
+      var errorMessage = error.message
       if (errorCode === 'auth/invalid-email') {
-        alert('Correo mal digitado')
+        alertify.set('notifier', 'delay', 2)
+        alertify.set('notifier', 'position', 'bottom-right')
+        alertify.error('Correo mal digitado')
       } else if (errorCode === 'auth/weak-password') {
-        alert('La contraseña digitada debe tener mas de 6 caracteres')
+        alertify.set('notifier', 'delay', 2)
+        alertify.set('notifier', 'position', 'bottom-right')
+        alertify.error('La contraseña digitada debe tener mas de 6 caracteres')
       } else if (errorCode === 'auth/email-already-in-use') {
-        alert('Correo ya usado')
+        alertify.set('notifier', 'delay', 2)
+        alertify.set('notifier', 'position', 'bottom-right')
+        alertify.error('Correo ya usado')
       } else if (errorCode === 'auth/network-request-failed') {
-        alert('Vulvete a conectar a la red del vecino')
+        alertify.set('notifier', 'delay', 2)
+        alertify.set('notifier', 'position', 'bottom-right')
+        alertify.error('Vulvete a conectar a la red del vecino')
       } else {
-        alert(errorMessage);
+        alertify.set('notifier', 'delay', 2)
+        alertify.set('notifier', 'position', 'bottom-right')
+        alertify.error(errorMessage)
       }
-    });
+    })
 }
 
 // Login
 singin()
-function singin(){
-  let nombre
-  firebase.auth().onAuthStateChanged(function (userLog) {
-    refUsers.once('value', (data) => {
-      dataUser = data.val();
-      nombre= dataUser[userLog.uid].nombre_perf
-      apellido = dataUser[userLog.uid].apellido_perf
-      alert(nombre + "  "+ apellido)
-    });
-    
+function singin() {
+  firebase.auth().onAuthStateChanged((userLog) => {
+    if (userLog) {
+        refUsers.once('value', function(data) {
+          dataUser = data.val()
+          nombre = dataUser[userLog.uid].nombre_perf
+          apellido = dataUser[userLog.uid].apellido_perf
+          enviarnombre(nombre,apellido);
+        });
 
-  if (userLog) {
-    var db = firebase.database();
-    var ref = db.ref("sena-hotel-bd-5b493");
-    // ref.orderByValue("nombre_perf").on("value", function(snapshot) {
-    // console.log(snapshot.key);
-    // });
-    var pagina = window.location.href;
-    var d = "file:///D:/ADSI/profe%20camilo/Proyecto/proyecto-hotel/pages/IndexLoginAndre.html";
-    var d2 = "http://127.0.0.1:5500/pages/IndexLoginAndre.html"
-    var d3 = "http://127.0.0.1:5500/pages/registro.html"
-    var d4 = "file:///D:/ADSI/profe%20camilo/Proyecto/Proyecto-hotel/pages/registro.html"
-    if (d == pagina || d2 == pagina || d3 == pagina || d4 == pagina) {
-      location.href = "../index.html";
-    } else {
-      for (let i = 0; i < 1; i++) {
-        // alert('El usuario no esta logueado')
-        num1 = 1;
+      // todos los datos obtenidos de la base de datos
+
+      var pagina = window.location.href
+      if (pagina.indexOf('registro.html') != -1 || pagina.indexOf('IndexLoginAndre.html') != -1) {
+        location.href = "../index.html"
       }
-    }
 
-  } else {
-
-    var pagina = window.location.href;
-    var d = "file:///D:/ADSI/profe%20camilo/Proyecto/proyecto-hotel/pages/IndexLoginAndre.html";
-    var d2 = "http://127.0.0.1:5500/pages/IndexLoginAndre.html"
-    var d3 = "http://127.0.0.1:5500/pages/registro.html"
-    var d4 = "file:///D:/ADSI/profe%20camilo/Proyecto/proyecto-hotel/pages/registro.html"
-    if (d == pagina || d2 == pagina || d3 == pagina || d4 == pagina) {
     } else {
-      for (let i = 0; i < 1; i++) {
-        alert('El usuario no esta logueado')
-        location.href = "pages/IndexLoginAndre.html";
-        num1 = 1;
-      }
+      // user not login
+
+      var pagina = window.location.href
+
+      // alertify.set('notifier', 'delay', 2)
+      // alertify.set('notifier', 'position', 'bottom-right')
+      // alertify.message('El usuario no esta logueado')
+
+      if (pagina.indexOf('registro.html') != -1 || pagina.indexOf('IndexLoginAndre.html') != -1) {
+        if (pagina.indexOf('registro.html') != -1) {
+          alertify.set('notifier', 'delay', 5)
+          alertify.set('notifier', 'position', 'bottom-center')
+          alertify.message('Registrate')
+        } else {
+          alertify.set('notifier', 'delay', 5)
+          alertify.set('notifier', 'position', 'bottom-center')
+          alertify.message('Inicia sesion')
+        }
+      } else
+        if (pagina.indexOf('index.html') != -1) {
+          location.href = "pages/IndexLoginAndre.html"
+          console.log(pagina)
+        } else {
+          console.log(pagina)
+          location.href = "IndexLoginAndre.html"
+        }
     }
-  }
-});
+  })
 }
 
 function validarlogin(correo, password) {
   firebase.auth().signInWithEmailAndPassword(correo, password).then(function () {
-    location.href = "../index.html";
+    // location.href = "../index.html"
+    singin();
   })
     .catch(function (error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
+      var errorCode = error.code
+      var errorMessage = error.message
       if (errorCode === 'auth/invalid-email') {
-        alert('Correo mal digitado')
+        alertify.set('notifier', 'delay', 2)
+        alertify.set('notifier', 'position', 'bottom-right')
+        alertify.success('Correo mal digitado')
       } else if (errorCode === 'auth/weak-password') {
-        alert('La contraseña digitada debe tener mas de 6 caracteres')
+        alertify.set('notifier', 'delay', 2)
+        alertify.set('notifier', 'position', 'bottom-right')
+        alertify.success('La contraseña digitada debe tener mas de 6 caracteres')
       } else if (errorCode === 'auth/email-already-in-use') {
-        alert('Correo ya usado')
+        alertify.set('notifier', 'delay', 2)
+        alertify.set('notifier', 'position', 'bottom-right')
+        alertify.success('Correo ya usado')
       } else if (errorCode === 'auth/network-request-failed') {
-        alert('Vulvete a conectar a la red del vecino')
+        alertify.set('notifier', 'delay', 2)
+        alertify.set('notifier', 'position', 'bottom-right')
+        alertify.success('Vulvete a conectar a la red del vecino')
       } else {
-        alert(errorMessage);
+        alertify.set('notifier', 'delay', 2)
+        alertify.set('notifier', 'position', 'bottom-right')
+        alertify.success(errorMessage)
       }
-    });
+    })
 }
 
 function cerrarsesion() {
-  firebase.auth().signOut().then(function () {
-    alert('cerrado de sesion con exito');
-  }).catch(function (error) {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    if (errorCode === 'auth/network-request-failed') {
-      alert('Vulvete a conectar a la red del vecino')
-    } else {
-      alert('Error: ', errorMessage, '   Codigo de error: ', errorCode);
-    }
-  });
+  swal("Estas seguro?", {
+    buttons: {
+      cancel: "Cancelar",
+      catch: {
+        text: "Continuar",
+        value: "catch",
+      },
+    },
+  })
+    .then((value) => {
+      switch (value) {
+        case "catch":
+          firebase.auth().signOut().then(function () {
+            swal({
+              text: "Cerrando Sesión",
+              icon: "success",
+              button: false,
+              timer: 3000,
+            });
+          }).catch(function (error) {
+            var errorCode = error.code
+            var errorMessage = error.message
+            if (errorCode === 'auth/network-request-failed') {
+              alertify.set('notifier', 'delay', 2)
+              alertify.set('notifier', 'position', 'bottom-right')
+              alertify.success('Vulvete a conectar a la red del vecino')
+            } else {
+              alertify.set('notifier', 'delay', 2)
+              alertify.set('notifier', 'position', 'bottom-right')
+              alertify.success(errorMessage)
+            }
+          })
+          break;
+
+        default:
+        alertify.set('notifier', 'delay', 3)
+        alertify.set('notifier', 'position', 'bottom-center')
+        alertify.success('Cancelado')
+        break;
+      }
+    });
+
 }
