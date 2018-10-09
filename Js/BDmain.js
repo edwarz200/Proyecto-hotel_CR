@@ -176,7 +176,7 @@ function singin() {
 
 function validarlogin(correo, password) {
   firebase.auth().signInWithEmailAndPassword(correo, password).then(function () {
-    // location.href = "../index.html"
+    location.href = "../index.html"
     singin();
   })
     .catch(function (error) {
@@ -226,6 +226,7 @@ function cerrarsesion() {
               button: false,
               timer: 3000,
             });
+              
           }).catch(function (error) {
             var errorCode = error.code
             var errorMessage = error.message
@@ -244,7 +245,7 @@ function cerrarsesion() {
         default:
         alertify.set('notifier', 'delay', 3)
         alertify.set('notifier', 'position', 'bottom-center')
-        alertify.success('Cancelado')
+        alertify.success('Cancelado');
         break;
       }
     });
