@@ -5,17 +5,19 @@
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
-.navb div:nth-child(1){
+
+.center2{
     overflow: hidden;
     width: 100%;
     height:200px;
 }
+
 .navb div img{
     width: 100%;
     height: 300px;
     filter: blur(3px);
-
 }
+
 .navb div:nth-child(2) {
     text-decoration: none;
     width: 100%;
@@ -23,47 +25,129 @@
     background-color: rgb(24, 19, 37);
     color: white;
     margin: auto;
-
 }
-.navb div ul{
+
+.navb  ul{
     width: 50%;
     height: 100%;
     margin: auto;
 }
-.navb div ul li{
+
+.navb  ul  li{
+
     height: 100%;
-    width: 150px;
+    width: 25%;
     padding: 0 20px;
     transform: 0s line;
 }
-.navb div ul li a{
+
+.navb ul  li a{
     height: 100%;
     padding: 0 0 10px 0;
     transform: 0s line;
 }
-.navb div ul li:hover a{
+
+.navb  ul  li:hover a{
     background-color: rgb(73, 71, 82);
     color: rgb(255, 255, 255);
 }
-.navb div ul li:hover{
+
+.navb  ul  li:hover{
     background-color: rgb(73, 71, 82);
 }
+
 .rese{
     font-family: 'Playball', cursive;
     font-size: 50px;
+    margin: auto;
 }
+
 .res{
     font-size: 25px;
     color: rgb(113, 121, 129);
     font-weight: none;
 }
+
 .navb{
     height: 250px;
 }
+
 .input-field {
     overflow: hidden !important;
 }
-.segun{
-    width: 100%;
-    height: 100px;
+
+.todo1 div imput{
+    padding: 0;
+  width: 100% !important;
+}
+
+.imput-field{
+    padding: 0 10px;
+    width: 50%;
+    height:100px !important;
+}
+
+/* .todo2 h1{
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+    margin: 0;
+} */
+
+.int{
+    float: left;
+}
+
+.letras h1{
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    width: 50px;
+    height: 20px;
+    color: #8a8585;
+}
+
+.letras2 h1{
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    width: 300px;
+    height: 20px;
+    color: #8a8585;
+}
+
+select{
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    width: 50px;
+    height: 20px;
+    color: #756f6f;
+}
+
+.browser-default{
+    width: 50% !important;
+    border-bottom:1px rgb(134, 133, 133) solid;
+    height: 50px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    font-weight: 200px;
+}
+.center1{
+    margin: auto;
+    height: 100%;
+    width: 50%;
+    /* width: 50%; */
+    
+}
+.divc{
+    margin: auto;
+    width: 90%;
+    height: 100%;
+}
+.dosc{
+    margin: auto;
+    width: 90%;
+    text-align: center;
 }
