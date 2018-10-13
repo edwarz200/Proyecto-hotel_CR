@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     regisbtnregistro.addEventListener('click', enviar = async (event) => {
         const formData = new FormData($formLogin)
         let dataUser = {
+            rol: formData.get('rol'),
             dni : formData.get('dni'),
             nombre:  formData.get('nombre'),
             apellido: formData.get('apellidos'),
@@ -21,26 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             correo: formData.get('correo'),
             contrasena: formData.get('pass')
         }
-        // if (dniper === "") {
-        //     alert('falta el Documento')
-        // } else { num1 = 1 }
-        // if (nombreper === "") {
-        //     alert('falta el nombre')
-        // } else { num2 = 1 }
-        // if (apellper === "") {
-        //     alert('faltan los apellidos')
-        // } else { num3 = 1 }
-        // if (telper === "") {
-        //     alert('falta el telefono')
-        // } else { num4 = 1 }
-        // if (correoper === "") {
-        //     alert('falta el email')
-        // } else { num5 = 1 }
-        // if (regiscontraseña === "") {
-        //     alert('falta la contraseña')
-        // } else { num6 = 1 }
 
-        // if (num1 === 1 & num2 === 1 & num3 === 1 & num4 === 1 & num5 === 1 & num6 === 1) {
             if (formData.get('pass') === formData.get('repass')) {
                 createperfil(dataUser);
         } else {

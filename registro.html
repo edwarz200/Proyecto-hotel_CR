@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulario</title>
+    <meta charset="utf-8">
+    <link type="text/css" href="../css/main_registro.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../materialize/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src='../alertifyjs/alertify.js'></script>
+	<link rel='stylesheet' href='../alertifyjs/css/alertify.min.css' />
+	<link rel='stylesheet' href='../css/changesalertfly.css'>
+	<link rel='stylesheet' href='../alertifyjs/css/themes/default.min.css' />
+	<link rel='stylesheet' href='../alertifyjs/css/themes/semantic.min.css' />
+	<link rel='stylesheet' href='../alertifyjs/css/themes/bootstrap.min.css' />
+	<link rel='stylesheet' href='../alertifyjs/css/alertify.rtl.min.css' />
+	<link rel='stylesheet' href='../alertifyjs/css/themes/default.rtl.min.css' />
+	<link rel='stylesheet' href='../alertifyjs/css/themes/semantic.rtl.min.css' />
+	<link rel='stylesheet' href='../alertifyjs/css/themes/bootstrap.rtl.min.css' />
+	<script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script> 
+</head>
+
+<body>
+    <div id="" class="contenedor row">
+        <section class="imgfondo"></section>
+        <div class="regresar .hide-on-small-only">
+            <a href="IndexLoginAndre.html" class="btn-small black left"><i class="material-icons pink-text text-lighten-5">arrow_back</i></a>
+        </div>
+
+        <div id="" class="envoltura col xl4 l5 s9">
+            <div id="" class="blue cabecera">
+                <h5>REGISTRO</h5>
+            </div>
+            <div id="" class="cuerpo gray">
+                <form id="form-login" action="#" class="row">
+                    <p><label for="dni">Documento:</label></p>
+                    <input name="dni" type="number" id="dni" class="dni inputcolortext" placeholder="Digite su Documento o cedula" required />
+                    <p><label for="nombre">Nombre:</label></p>
+                    <input name="nombre" type="text" id="nombre" class="nombre inputcolortext" placeholder="Digite su nombre" required/>
+                    <p><label for="apellidos">Apellidos:</label></p>
+                    <input name="apellidos" type="text" id="apellidos" class="apellidos inputcolortext" placeholder="Digite sus apellidos" required>
+                    <p><label for="telefono">Telefono:</label></p>
+                    <input name="telefono" type="number" id="telefono" class="inputcolortext" placeholder="Digite su telefono" required/>
+                    <p><label for="correo">Correo:</label></p>
+                    <input name="correo" type="email" id="correo" class="email inputcolortext" placeholder="Digite su e-mail" required/>
+                    <input name="rol" type="text" id="rol" class="rol inputcolortext"   value="Cliente" required readonly style="display: none;"/>
+                    <p><label for="pass">Contraseña:</label></p>
+                    <input name="pass" type="password" id="pass" class="inputcolortext contraseñar" placeholder="Digite una contraseña" required/>
+                    <p><label for="repass">Repetir Contraseña:</label></p>
+                    <input name="repass" type="password" id="repass" class="inputcolortext  recontraseñar" placeholder="Repetir contraseña" required/>
+                    <p id="bot"><a class="btn btnrgistro pink ">Registrarse</a></p>
+                </form>
+            </div>
+            <div id="" class="pie gray col m12">Sistema de Login Y Registro</div>
+        </div><!-- fin contenedor -->
+    </div>
+    <div id="snackbar">Some text some message..</div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="../materialize/js/materialize.min.js"></script>
+    <script src="../Js/BDmain.js"></script>
+    <script src="../Js/Registro.js"></script>
+</body>
+
+</html>

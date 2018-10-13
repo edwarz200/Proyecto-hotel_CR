@@ -11,6 +11,9 @@ firebase.initializeApp(config)
 let refUsers = firebase.database().ref('users')
 let dataUser
 
+const $app = document.querySelector('#app')
+const $loader = document.querySelector('.jm_loadingpage')
+
 
 // Crear perfil
 
@@ -18,11 +21,12 @@ function writePerfilData(data, uid) {
   // const userid = firebase.auth().currentUser.uid
   // const dni = data.dni
   firebase.database().ref('users/' + uid).set({
-    dni: data.dni,
-    nombre_perf: data.nombre,
-    apellido_perf: data.apellido,
-    telefono_perf: data.telefono,
-    correo_perf: data.correo,
+    ROL: data.rol,
+    DNI: data.dni,
+    Nombre: data.nombre,
+    Apellido: data.apellido,
+    Telefono: data.telefono,
+    Correo: data.correo,
   }).then(function () {
     // validarlogin(data.correo, data.contrasena)
   }).catch(function (error) {
@@ -39,9 +43,7 @@ function writePerfilData(data, uid) {
     } else {
       alert(errorMessage)
     }
-
     var user = firebase.auth().currentUser
-
     user.delete().then(function () {
       alert('Usuario borrado')
     }).catch(function (error) {
@@ -68,7 +70,9 @@ function writePerfilData(data, uid) {
 function validaciondecorreo() {
   var user = firebase.auth().currentUser
   user.sendEmailVerification().then(function () {
-    alert('Email Enviado')
+    alertify.set('notifier', 'delay', 3)
+    alertify.set('notifier', 'position', 'bottom-center')
+    alertify.success('email enviado');
     // location.href = "../pages/IndexLoginAndre.html"
   }).catch(function (error) {
     var errorCode = error.code
@@ -96,6 +100,9 @@ function createperfil(data) {
     singin()
     // location.href = "../index.html"
     // validaciondecorreo()
+    alertify.set('notifier', 'delay', 3)
+    alertify.set('notifier', 'position', 'bottom-center')
+    alertify.success('Bienvenido');
   })
     .catch(function (error) {
       var errorCode = error.code
@@ -129,18 +136,20 @@ singin()
 function singin() {
   firebase.auth().onAuthStateChanged((userLog) => {
     if (userLog) {
-        refUsers.once('value', function(data) {
-          dataUser = data.val()
-          nombre = dataUser[userLog.uid].nombre_perf
-          apellido = dataUser[userLog.uid].apellido_perf
-          enviarnombre(nombre,apellido);
-        });
+      refUsers.once('value', function (data) {
+        dataUser = data.val()
+        nombre = dataUser[userLog.uid].Nombre
+        apellido = dataUser[userLog.uid].Apellido
+        rol = dataUser[userLog.uid].ROL
+        enviarnombre(nombre, apellido,rol);
+      });
+      
 
       // todos los datos obtenidos de la base de datos
 
       var pagina = window.location.href
-      if (pagina.indexOf('registro.html') != -1 || pagina.indexOf('IndexLoginAndre.html') != -1) {
-        location.href = "../index.html"
+      if (pagina.indexOf('registro.html') != -1 || pagina.indexOf('index.html') != -1) {
+        location.href = "pages/principal_page.html"
       }
 
     } else {
@@ -152,7 +161,7 @@ function singin() {
       // alertify.set('notifier', 'position', 'bottom-right')
       // alertify.message('El usuario no esta logueado')
 
-      if (pagina.indexOf('registro.html') != -1 || pagina.indexOf('IndexLoginAndre.html') != -1) {
+      if (pagina.indexOf('registro.html') != -1 || pagina.indexOf('index.html') != -1) {
         if (pagina.indexOf('registro.html') != -1) {
           alertify.set('notifier', 'delay', 5)
           alertify.set('notifier', 'position', 'bottom-center')
@@ -162,13 +171,8 @@ function singin() {
           alertify.set('notifier', 'position', 'bottom-center')
           alertify.message('Inicia sesion')
         }
-      } else
-        if (pagina.indexOf('index.html') != -1) {
-          location.href = "pages/IndexLoginAndre.html"
-          console.log(pagina)
-        } else {
-          console.log(pagina)
-          location.href = "IndexLoginAndre.html"
+      } else{
+          location.href = "../index.html"
         }
     }
   })
@@ -176,7 +180,7 @@ function singin() {
 
 function validarlogin(correo, password) {
   firebase.auth().signInWithEmailAndPassword(correo, password).then(function () {
-    location.href = "../index.html"
+    location.href = "pages/principal_page.html"
     singin();
   })
     .catch(function (error) {
@@ -226,7 +230,7 @@ function cerrarsesion() {
               button: false,
               timer: 3000,
             });
-              
+
           }).catch(function (error) {
             var errorCode = error.code
             var errorMessage = error.message
@@ -243,10 +247,10 @@ function cerrarsesion() {
           break;
 
         default:
-        alertify.set('notifier', 'delay', 3)
-        alertify.set('notifier', 'position', 'bottom-center')
-        alertify.success('Cancelado');
-        break;
+          alertify.set('notifier', 'delay', 3)
+          alertify.set('notifier', 'position', 'bottom-center')
+          alertify.success('Cancelado');
+          break;
       }
     });
 

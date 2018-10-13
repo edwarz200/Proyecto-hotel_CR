@@ -9,10 +9,10 @@
     <meta name="keywords" content="">
     <meta charset="UTF-8">
     <title>Hotel Castillo Resort</title>
-
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <!--CSS-->
     <link rel="stylesheet" href="../css/linearicons.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/magnific-popup.css">
@@ -20,48 +20,66 @@
     <link rel="stylesheet" href="../css/nice-select.css">
     <link rel="stylesheet" href="../css/animate.min.css">
     <link rel="stylesheet" href="../css/owl.carousel.css">
-    <link rel="stylesheet" href="../css/mainindex.css">
+    <script src='../alertifyjs/alertify.js'></script>
+    <link rel='stylesheet' href='../alertifyjs/css/alertify.min.css' />
+    <link rel='stylesheet' href='../css/changesalertfly.css'>
+    <link rel='stylesheet' href='../alertifyjs/css/themes/default.min.css' />
+    <link rel='stylesheet' href='../alertifyjs/css/themes/semantic.min.css' />
+    <link rel='stylesheet' href='../alertifyjs/css/themes/bootstrap.min.css' />
+    <link rel='stylesheet' href='../alertifyjs/css/alertify.rtl.min.css' />
+    <link rel='stylesheet' href='../alertifyjs/css/themes/default.rtl.min.css' />
+    <link rel='stylesheet' href='../alertifyjs/css/themes/semantic.rtl.min.css' />
+    <link rel='stylesheet' href='../alertifyjs/css/themes/bootstrap.rtl.min.css' />
+    <link rel='stylesheet' href='../css/mainprincipal_page.css'>
+    <script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>
+    <script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 </head>
 
 <body>
-    <header id="header">
-        <div class="header-top">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-sm-6 col-6 header-top-left">
-                        <ul>
-                            <li><a href="#" class="nombrecliente">dsds</a></li>
-                            <li><a href="#">Visítanos</a></li>
-                        </ul>
+    <span class="jm_loadingpage">
+        <img src="../assets/Iconos/load2.gif" alt="">
+        <p>Cargando...</p>
+    </span>
+    <div id="app">
+        <header id="header">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-sm-6 col-6 header-top-left">
+                            <ul>
+                                <li><a href="#" class="nombrecliente"></a></li>
+                                <li><a href="#">Visítanos</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container main-menu">
-            <div class="row align-items-center justify-content-between d-flex">
-                <div id="logo">
-                    <a href="#"><img src="../assets/logo.png" alt="" title="" /></a>
+            <div class="container main-menu">
+                <div class="row align-items-center justify-content-between d-flex">
+                    <div id="logo">
+                        <a href="#"><img src="../assets/logo.png" alt="" title="" /></a>
+                    </div>
+                    <nav id="nav-menu-container">
+                        <ul class="nav-menu">
+                            <li><a href="principal_page.html">Home</a></li>
+                            <li><a href="acercade.html">Acerca de</a></li>
+                            <li><a href="habitaciones.html">Habitaciones</a></li>
+                            <li><a href="">Servicios</a></li>
+                            <li><a href="galeria.html">Galería</a></li>
+                            <li><a href="">Historial</a></li>
+                            <li id="agregar_usuarios" class="menu-has-children"></li>
+                            <li><a href="#" class="menu-has-children">Mi Perfil</a>
+                                <ul>
+                                    <li><a href="">Configuración</a></li>
+                                    <li><a class="cerrarsesion" href="#">Cerrar sesión</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav id="nav-menu-container">
-                    <ul class="nav-menu">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="#">Acerca de</a></li>
-                        <li><a href="habitaciones.html">Habitaciones</a></li>
-                        <li><a href="">Servicios</a></li>
-                        <li><a href="galeria.html">Galería</a></li>
-                        <li><a href="">Historial</a></li>
-                        <li class="menu-has-children"><a href="#">Mi Perfil</a>
-                            <ul>
-                                <li><a href="">Configuración</a></li>
-                                <li><a href="" class="cerrarsesion">Cerrar sesión</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
             </div>
-        </div>
-    </header>
-
+        </header>
+    </div>
     <!-- Inicio banner Area -->
     <section class="about-banner relative">
         <div class="overlay overlay-bg"></div>
@@ -71,7 +89,7 @@
                     <h1 class="text-white">
                         Acerca de
                     </h1>
-                    <p class="text-white link-nav"><a href="../index.html">Home </a> <span class="lnr lnr-arrow-right"></span>
+                    <p class="text-white link-nav"><a href="index.html">Home </a> <span class="lnr lnr-arrow-right"></span>
                         <a href="#"> Acerca de</a></p>
                 </div>
             </div>
@@ -84,7 +102,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 info-left">
-                    <img class="img-fluid" src="../assets/about/info-img.png" alt="">
+                    <img class="img-fluid" src="../assets/acercade/info-img.png" alt="">
                 </div>
                 <div class="col-lg-6 info-right">
                     <h6>SOBRE NOSOTROS</h6>
@@ -102,12 +120,40 @@
     </section>
     <!-- Fin info -->
 
+    <!-- Inicio info 2 -->
+    <section class="insurence-two-area pb-120">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 insurence-left">
+                    <h6 class="text-uppercase">Necesitas saber qué</h6>
+                    <h1>Nuestro Hotel Castillo Resort</h1>
+                    <p>
+                        Está ubicado a pocos minutos del centro de la ciudad y de los principales puntos de interés
+                        turístico y cultural que hacen de San Gil una de las ciudades más atractivas y cosmopolitas.
+                    </p>
+                    <div class="list-wrap">
+                        <ul>
+                            <li>Strategic approach towards redesigning brand.</li>
+                            <li>logo design strategy ensures a perfectly crafted
+                                logo for your business.</li>
+                            <li>Branding that stands out in the crowd.</li>
+                            <li>Modern and evergreen logo for your business.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 insurence-right">
+                    <img class="img-fluid img-two" src="../assets/insurence/i2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Inicio info 2 -->
+
     <!-- Inicio contacto Area -->
     <section class="contact-page-area section-gap">
         <div class="container">
             <div class="row">
-                <iframe class="map-wrap" id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15855.10927312301!2d-73.130462!3d6.5497755!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xadee56ac7b1ce431!2sHotel+Castillo+Resort+San+Gil!5e0!3m2!1ses!2sco!4v1538861082518"
-                    width="1130" height="436" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
                 <div class="col-lg-4 d-flex flex-column address-wrap">
                     <div class="single-contact-address d-flex flex-row">
                         <div class="icon">
@@ -238,6 +284,8 @@
     </footer>
     <!-- Fin Footer Area -->
 
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script src="../Js/BDmain.js"></script>
     <script src="../Js/vendor/jquery-2.2.4.min.js"></script>
     <script src="../Js/popper.min.js"></script>
     <script src="../Js/vendor/bootstrap.min.js"></script>
@@ -251,11 +299,7 @@
     <script src="../Js/jquery.nice-select.min.js"></script>
     <script src="../Js/owl.carousel.min.js"></script>
     <script src="../Js/mail-script.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="../Js/mainindex.js"></script>
-    <script src="../Js/maps.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
-    <script src="../Js/BDmain.js"></script>
+    <script src="../Js/mainprincipal_page.js"></script>
 </body>
 
 </html>
