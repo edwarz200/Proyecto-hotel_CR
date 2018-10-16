@@ -21,7 +21,7 @@ function enviarnombre(nombre, apellido, rol) {
         var newContent2 = document.createTextNode("Recepcionistas")
         var newContent3 = document.createTextNode("Administradores")
         var liag = document.getElementById('agregar_usuarios')
-        
+        var lihab = document.querySelector('.hab_admin')
         liag.setAttribute('class', 'menu-has-children')
         a.setAttribute('href','#')
         a.appendChild(newContent)
@@ -41,14 +41,25 @@ function enviarnombre(nombre, apellido, rol) {
         a2.setAttribute('href','registro_A_R.html')
         a3.setAttribute('href','registro_A_R.html')
         liag.appendChild(a)
+        if (pagina.indexOf('habitacionesadministrador_page.html') != -1) {
+
+        }else{
+            lihab.setAttribute('href','habitacionesadministrador_page.html') 
+        }
         $app.style.display = "block"
         $loader.style.display = "none"
 
+
+
     } else if (rolperf === 'Recepcionista') {
         document.querySelector('.nombrecliente').innerHTML = ('<a></a>') + ('Bienvenido ') + rolperf + (' : ') + nombreperf;
+        $app.style.display = "block"
+        $loader.style.display = "none"
     } else {
         // index
         document.querySelector('.nombrecliente').innerHTML = ('<a></a>') + ('Bienvenido: ') + nombreperf;
+        $app.style.display = "block"
+        $loader.style.display = "none"
     }
 }
 // main

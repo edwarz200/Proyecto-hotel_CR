@@ -32,7 +32,7 @@
 	<link rel='stylesheet' href='../alertifyjs/css/themes/bootstrap.rtl.min.css' />
 	<link rel='stylesheet' href='../css/mainprincipal_page.css'>
 	<script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>
-	<script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	<!-- <script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script> -->
 </head>
 
 <body>
@@ -62,11 +62,12 @@
 					<nav id="nav-menu-container">
 						<ul class="nav-menu">
 							<li><a href="#">Home</a></li>
-							<li><a href="../pages/acercade.html">Acerca de</a></li>
-							<li><a href="../pages/habitaciones.html">Habitaciones</a></li>
-							<li><a href="">Servicios</a></li>
-							<li><a href="../pages/galeria.html">Galería</a></li>
-							<li><a href="historial.html">Historial</a></li>
+							<li><a href="acercade_page.html">Acerca de</a></li>
+                            <li><a class="hab_admin" href="habitaciones_page.html">Habitaciones</a></li>
+							<!-- <li><a href="habitaciones_page.html">Habitaciones</a></li> -->
+							<li><a href="servicios_page.html">Servicios</a></li>
+							<li><a href="galeria_page.html">Galería</a></li>
+							<li><a href="historial_page.html">Historial</a></li>
 							<li id="agregar_usuarios" class="menu-has-children"></li>
 							<li><a href="#" class="menu-has-children">Mi Perfil</a>
 								<ul>
@@ -94,7 +95,7 @@
 						</p>
 						<a href="#" class="primary-btn text-uppercase">Ver Galería</a>
 					</div>
-					<div class="col-lg-4 col-md-6 banner-right">
+					<div class="col-lg-4 col-md-6 banner-right divreservas">
 						<ul class="nav nav-tabs" id="myTab" role="tablist">
 							<li class="nav-item">
 								<a class="nav-link active" id="flight-tab" data-toggle="tab" href="#flight" role="tab" aria-controls="flight"

@@ -1,68 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Formulario</title>
-    <meta charset="utf-8">
-    <link type="text/css" href="../css/main_registro.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../materialize/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<script src='../alertifyjs/alertify.js'></script>
-	<link rel='stylesheet' href='../alertifyjs/css/alertify.min.css' />
-	<link rel='stylesheet' href='../css/changesalertfly.css'>
-	<link rel='stylesheet' href='../alertifyjs/css/themes/default.min.css' />
-	<link rel='stylesheet' href='../alertifyjs/css/themes/semantic.min.css' />
-	<link rel='stylesheet' href='../alertifyjs/css/themes/bootstrap.min.css' />
-	<link rel='stylesheet' href='../alertifyjs/css/alertify.rtl.min.css' />
-	<link rel='stylesheet' href='../alertifyjs/css/themes/default.rtl.min.css' />
-	<link rel='stylesheet' href='../alertifyjs/css/themes/semantic.rtl.min.css' />
-	<link rel='stylesheet' href='../alertifyjs/css/themes/bootstrap.rtl.min.css' />
-	<script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script> 
+	<title>Login V3</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="assets/iconos/favicon.png" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Js/vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Js/vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Js/vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Js/vendor/animsition/css/animsition.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Js/vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="Js/vendor/daterangepicker/daterangepicker.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/mainregistro.css">
+	<!--===============================================================================================-->
 </head>
 
 <body>
-    <div id="" class="contenedor row">
-        <section class="imgfondo"></section>
-        <div class="regresar .hide-on-small-only">
-            <a href="IndexLoginAndre.html" class="btn-small black left"><i class="material-icons pink-text text-lighten-5">arrow_back</i></a>
-        </div>
 
-        <div id="" class="envoltura col xl4 l5 s9">
-            <div id="" class="blue cabecera">
-                <h5>REGISTRO</h5>
-            </div>
-            <div id="" class="cuerpo gray">
-                <form id="form-login" action="#" class="row">
-                    <p><label for="dni">Documento:</label></p>
-                    <input name="dni" type="number" id="dni" class="dni inputcolortext" placeholder="Digite su Documento o cedula" required />
-                    <p><label for="nombre">Nombre:</label></p>
-                    <input name="nombre" type="text" id="nombre" class="nombre inputcolortext" placeholder="Digite su nombre" required/>
-                    <p><label for="apellidos">Apellidos:</label></p>
-                    <input name="apellidos" type="text" id="apellidos" class="apellidos inputcolortext" placeholder="Digite sus apellidos" required>
-                    <p><label for="telefono">Telefono:</label></p>
-                    <input name="telefono" type="number" id="telefono" class="inputcolortext" placeholder="Digite su telefono" required/>
-                    <p><label for="correo">Correo:</label></p>
-                    <input name="correo" type="email" id="correo" class="email inputcolortext" placeholder="Digite su e-mail" required/>
-                    <input name="rol" type="text" id="rol" class="rol inputcolortext"   value="Cliente" required readonly style="display: none;"/>
-                    <p><label for="pass">Contraseña:</label></p>
-                    <input name="pass" type="password" id="pass" class="inputcolortext contraseñar" placeholder="Digite una contraseña" required/>
-                    <p><label for="repass">Repetir Contraseña:</label></p>
-                    <input name="repass" type="password" id="repass" class="inputcolortext  recontraseñar" placeholder="Repetir contraseña" required/>
-                    <p id="bot"><a class="btn btnrgistro pink ">Registrarse</a></p>
-                </form>
-            </div>
-            <div id="" class="pie gray col m12">Sistema de Login Y Registro</div>
-        </div><!-- fin contenedor -->
-    </div>
-    <div id="snackbar">Some text some message..</div>
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('assets/hotels/bg-01.jpg');">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-logo">
+						<i class="zmdi zmdi-landscape"></i>
+					</span>
 
-    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script src="../materialize/js/materialize.min.js"></script>
-    <script src="../Js/BDmain.js"></script>
-    <script src="../Js/Registro.js"></script>
+					<span class="login100-form-title p-b-34 p-t-27">
+						Registrate
+					</span>
+
+					<form id="form-login" action="#" class="row">
+						<div class="wrap-input100 validate-input">
+							<input name="dni" type="number" id="dni" class="input100" placeholder="Digite su Documento o cedula" required />
+							<span class="focus-input100" data-placeholder="&#xf129;"></span>
+						</div>
+
+						<div class="wrap-input100 validate-input">
+							<input name="nombre" type="text" id="nombre" class="input100" placeholder="Digite su nombre" required/>
+							<span class="focus-input100" data-placeholder="&#xf205;"></span>
+						</div>
+
+						<div class="wrap-input100 validate-input">
+							<input name="apellidos" type="text" id="apellidos" class="input100" placeholder="Digite sus apellidos" required>
+							<span class="focus-input100" data-placeholder="&#xf207;"></span>
+						</div>
+
+						<div class="wrap-input100 validate-input">
+							<input name="telefono" type="number" id="telefono" class="input100" placeholder="Digite su telefono" required/>
+							<span class="focus-input100" data-placeholder="&#xf2be;"></span>
+						</div>
+
+						<!-- <div class="wrap-input100 validate-input"> -->
+							<!-- <input name="apellidos" type="text" id="apellidos" class="input100" placeholder="Digite sus apellidos" required> -->
+							<input name="rol" type="text" id="rol" class="rol inputcolortext"   value="Cliente" required readonly style="display: none;"/>
+							<!-- <span class="focus-input100" data-placeholder="&#xf206;"></span>
+						</div> -->
+
+						<div class="wrap-input100 validate-input">
+							<input name="correo" type="email" id="correo" class="input100" placeholder="Digite su e-mail" required/>
+							<span class="focus-input100" data-placeholder="&#xf15a;"></span>
+						</div>
+
+						<div class="wrap-input100 validate-input">
+							<input name="pass" type="password" id="pass" class="input100" placeholder="Digite una contraseña" required/>
+							<span class="focus-input100" data-placeholder="&#xf183;"></span>
+						</div>
+						
+						<div class="wrap-input100 validate-input">
+							<input name="repass" type="password" id="repass" class="input100" placeholder="Repite la contraseña" required/>
+							<span class="focus-input100" data-placeholder="&#xf183;"></span>
+						</div>
+
+						<!-- <div class="contact100-form-checkbox">
+						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+						<label class="label-checkbox100" for="ckb1">
+							Remember me
+						</label>
+					</div> -->
+
+						<div class="container-login100-form-btn">
+							<button class="login100-form-btn">
+								Iniciar sesión
+							</button>
+						</div>
+
+						<div class="text-center p-t-90">
+							<a class="txt1" href="#">
+								Olvidaste tu contraseña?
+							</a>
+						</div>
+					</form>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+	<!--===============================================================================================-->
+	<script src="Js/vendor/jquery-2.2.4.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="Js/vendor/animsition/js/animsition.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="Js/vendor/bootstrap/js/popper.js"></script>
+	<script src="Js/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="Js/vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="Js/vendor/daterangepicker/moment.min.js"></script>
+	<script src="Js/vendor/daterangepicker/daterangepicker.js"></script>
+	<!--===============================================================================================-->
+	<script src="Js/vendor/countdowntime/countdowntime.js"></script>
+	<!--===============================================================================================-->
+	<script src="Js/main_registro.js"></script>
+
 </body>
 
 </html>

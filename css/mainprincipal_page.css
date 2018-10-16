@@ -1,10 +1,10 @@
 /* =================================== */
 /*  Basic Style 
 /* =================================== */
-#app {
+.app {
   display: none;
 }
-#loader{
+.loader{
   display: block;
 }
 ::-moz-selection {
@@ -2068,11 +2068,6 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
-  transition: all .35s linear;
-}
-.jheader{
-  background: url(../assets/Iconos/gris.png) center;
-  min-height: 200px;
 }
 
 #header.header-scrolled {
@@ -2461,10 +2456,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
-.banner-left{
-  bottom: 12px;
-}
-
 .banner-left h6 {
   text-transform: uppercase;
   font-weight: 400;
@@ -2518,9 +2509,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-bottom: 60px;
   }
 }
-.banner-right{
-  top: 50px;
-}
+
 .banner-right .nav-tabs {
   border-bottom: none;
 }
@@ -2958,6 +2947,28 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-weight: 300;
 }
 
+.fa.fa-times {
+  position: absolute;
+  top: 35px;
+  right: 22px;
+  color: white;
+}
+
+.fa.fa-times:hover{
+  color: #f8b600;
+}
+
+.fa.fa-edit {
+  position: absolute;
+  top: 35px;
+  right: 22px;
+  color: white;
+}
+
+.fa.fa-edit:hover{
+  color: #f8b600;
+}
+
 @media (max-width: 575px) {
   .recent-blog-area .single-recent-blog-post {
     margin: 15px;
@@ -3214,7 +3225,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .list-wrap ul {
-  list-style-image: url("../assets/insurence/bullet.png");
+  list-style-image: url("../img/insurence/bullet.png");
 }
 
 .list-wrap li {
@@ -3232,11 +3243,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /* =================================== */
-/*  Blog Styles
+/*  Habitaciones
 /* =================================== */
-/*============ Start Blog Home Styles  =============*/
+/*============ Inicio Habitaciones  =============*/
 .blog-home-banner {
-  background: url(../assets/blog/blog-home-banner.jpg) bottom;
+  background: url(../assets/habitaciones/habitaciones-banner.jpg) bottom;
   background-size: cover;
   padding: 130px 0px;
 }
@@ -3260,6 +3271,34 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .blog-home-banner .overlay-bg {
+  background: rgba(0, 0, 0, 0.5);
+}
+/*============ Banner Galería  =============*/
+.blog-galería-banner {
+  background: url(../assets/galeria/family-wallpaper.jpg) bottom;
+  background-size: cover;
+  padding: 130px 0px;
+}
+
+.blog-galería-banner .primary-btn {
+  border-radius: 0px;
+  background: #fff;
+  color: #222;
+  font-weight: 600;
+  border: 1px solid transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.blog-galería-banner .primary-btn:hover {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+.blog-galería-banner .overlay-bg {
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -4464,6 +4503,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #f8b600;
 }
 
+.divreservas{
+  top: 60px;
+}
 
 .jm_loadingpage{
   display: block;

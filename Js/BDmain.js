@@ -148,7 +148,7 @@ function singin() {
       // todos los datos obtenidos de la base de datos
 
       var pagina = window.location.href
-      if (pagina.indexOf('registro.html') != -1 || pagina.indexOf('index.html') != -1) {
+      if (pagina.indexOf('registro.html') != -1 || pagina.indexOf('index.html') != -1 || pagina.indexOf('page.html') == -1 ) {
         location.href = "pages/principal_page.html"
       }
 
@@ -171,7 +171,7 @@ function singin() {
           alertify.set('notifier', 'position', 'bottom-center')
           alertify.message('Inicia sesion')
         }
-      } else{
+      } else if(pagina.indexOf('page.html') != -1){
           location.href = "../index.html"
         }
     }
